@@ -1,0 +1,261 @@
+* {
+   margin: 0px;
+   box-sizing: border-box;
+   padding: 0px;
+}
+
+body {
+    background: #323232;
+    
+}
+
+.timer-container {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    background: #CF4B00;
+    transform: matrix(0.96, 0, -0.31, 1, 0, 0) translateX(-50%);
+    padding: .1em 2em .5em 2em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 10;
+}
+
+.timer-container .time {
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+
+    color: #FFFFFF;
+}
+
+.timer-container .timer-info span {
+    background-color: white;
+    border-radius: 3px;
+    font-size: .7rem;
+    padding: .2em .5em;
+    margin-left: .4em;
+}
+
+
+.logo {
+    margin-top: 5em;
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+main {
+    padding: 1em;
+}
+
+.quiz-container {
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 10px;
+    display: flex;
+    padding: .5em;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+
+.question-number {
+    padding: 0 .3em;
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+.quiz-sub-container {
+    width: 100%;
+}
+
+.question {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: .5em;
+    margin-bottom: 1em;
+    min-height: 100px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+}
+
+.options div {
+    background: #FFFFFF;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.option .option-select {
+    background: #DFDFDF;
+    border-radius: 10px;
+    padding: .7em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.option .option-select span {
+    
+}
+
+.option span:last-child {
+    align-self: center;
+    padding: .5em;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit button {
+    background: #CF4B00;
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.25);
+    padding: 1em 2.5em;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Begin Quiz Modal */
+
+
+.begin-quiz-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #323232;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.quiz-form {
+    text-align: center;
+    margin-top: 8em;
+}
+
+.quiz-form input {
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    font-size: 2rem;
+    width: 50vw;
+    margin-bottom: 1em;
+    padding: .3em;
+}
+
+.quiz-form button {
+    background: #A55EFF;
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.25);
+    padding: 1em 2.5em;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quiz-form button:active {
+    background: #A55EFF;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    transform: translate(2%,2%);
+}
+
+/* Success Modal */
+.success-quiz-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #323232;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-quiz-container .image  {
+    text-align: center;
+}
+
+.success-message {
+    color: rgb(59, 255, 59);
+    font-size: 4rem;
+    padding: .2em 0em;
+}
+
+.success-quiz-container .image img {
+    width: 60%;
+}
+
+.score-message {
+    color: rgb(240, 240, 240);
+    font-size: 4rem;
+    padding: .2em 0em;
+}
+
+.retry-quiz button {
+    background: #5d5d5d;
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.25);
+    padding: 1em 2.5em;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.retry-quiz button:active {
+    background: #A55EFF;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    transform: translate(2%,2%);
+}
+
+/* Failure Quiz Modal */
+.failure-quiz-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #323232;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.failure-message {
+    color: rgb(255, 25, 25);
+    font-size: 4rem;
+    padding: .2em 0em;
+}
+
+
+/* Hide Modal Always at the end */
+
+.hide-modal {
+    display: none;
+}
