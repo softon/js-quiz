@@ -1,4 +1,4 @@
-# Simple Javascript Quiz
+# Simple Javascript Quiz ([Demo](https://softon.github.io/js-quiz/))
 
 A simple javascript quiz web app using HTML/CSS/Javascript UI designed using Figma.
 

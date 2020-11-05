@@ -19,6 +19,8 @@ body {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index: 10;
+    width: 200px;
+    text-align: center;
 }
 
 .timer-container .time {
@@ -33,7 +35,7 @@ body {
     border-radius: 3px;
     font-size: .7rem;
     padding: .2em .5em;
-    margin-left: .4em;
+    margin-left: 1em;
 }
 
 
@@ -208,13 +210,13 @@ main {
     width: 60%;
 }
 
-.score-message {
+.score-message-pass,.score-message-fail {
     color: rgb(240, 240, 240);
     font-size: 4rem;
     padding: .2em 0em;
 }
 
-.retry-quiz button {
+.retry-quiz-fail button,.retry-quiz-pass button {
     background: #5d5d5d;
     box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.25);
     padding: 1em 2.5em;
@@ -226,7 +228,7 @@ main {
     cursor: pointer;
 }
 
-.retry-quiz button:active {
+.retry-quiz-fail button:active,.retry-quiz-pass button:active {
     background: #A55EFF;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     transform: translate(2%,2%);
