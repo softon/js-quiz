@@ -8,7 +8,7 @@ let name = '';
 let question_count = 5;
 let questions = [];
 let timer;
-let time_per_questions = 5;
+let time_per_questions = 150;
 let timeObj = {
     minute: 0,
     second: 0
@@ -133,28 +133,28 @@ function renderQuestion(quests){
                                         <span>a.</span>
                                         <span><input type="radio" name="answer${index}" value="0"  ></span>
                                     </span>
-                                    <span class="blur-option">${quest.options[0]}</span>
+                                    <span class="scramble-option">${generateOptionHTML(quest.options[0])}</span>
                                 </div>
                                 <div class="option">
                                     <span class="option-select">
                                         <span>b.</span>
                                         <span><input type="radio" name="answer${index}" value="1" ></span>
                                     </span>
-                                    <span class="blur-option">${quest.options[1]}</span>
+                                    <span class="scramble-option">${generateOptionHTML(quest.options[1])}</span>
                                 </div>
                                 <div class="option">
                                     <span class="option-select">
                                         <span>c.</span>
                                         <span><input type="radio" name="answer${index}" value="2"  ></span>
                                     </span>
-                                    <span class="blur-option">${quest.options[2]}</span>
+                                    <span class="scramble-option">${generateOptionHTML(quest.options[2])}</span>
                                 </div>
                                 <div class="option">
                                     <span class="option-select">
                                         <span>d.</span>
                                         <span><input type="radio" name="answer${index}"  value="3" ></span>
                                     </span>
-                                    <span class="blur-option">${quest.options[3]}</span>
+                                    <span class="scramble-option">${generateOptionHTML(quest.options[3])}</span>
                                 </div>
                             </div>
                         </div>
@@ -167,5 +167,29 @@ function renderQuestion(quests){
 
 }
 
+function generateOptionHTML(text){
+    let html = '';
+    Array.from(text).forEach((letter,index) => {
+        if(index%2==0){
+            html += '<span class="even-ch">'+letter+'</span>';
+            
+        }else{
+            html += '<span class="odd-ch hide-ch">'+letter+'</span>';
+            
+        }
+    });
+    return html;
+}
 
+function vibrator(){
+    setInterval(() => {
+        document.querySelectorAll('.even-ch').forEach(ele => {
+            ele.classList.toggle('hide-ch');
+        });
+        document.querySelectorAll('.odd-ch').forEach(ele => {
+            ele.classList.toggle('hide-ch');
+        });
+    }, 15);
+}
 
+vibrator();

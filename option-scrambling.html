@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="time">12:00</div>
+        <div class="timer-info">
+            <span>MIN</span>
+            <span>SEC</span>
+        </div>
+    </div>
+
+    <div class="logo"><h1>EazyQuiz</h1></div>
+
+    <main>
+        <form action="" id="quiz-form">
+            <div class="questions">
+                <!-- <div class="quiz-container">
+                    <div class="question-number">Q.1.</div>
+                    <div class="quiz-sub-container">
+                        <div class="question">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum impedit suscipit nam fuga iure fugiat maxime deleniti? Perferendis veniam laboriosam aperiam, voluptates maiores ea eligendi? Laudantium blanditiis temporibus consectetur veniam?
+                        </div>
+                        <div class="options">
+                            <div class="option">
+                                <span class="option-select">
+                                    <span>a.</span>
+                                    <span><input type="radio" name="option1"  ></span>
+                                </span>
+                                <span>Options Text</span>
+                            </div>
+                            <div class="option">
+                                <span class="option-select">
+                                    <span>b.</span>
+                                    <span><input type="radio" name="option1" ></span>
+                                </span>
+                                <span>Options Text</span>
+                            </div>
+                            <div class="option">
+                                <span class="option-select">
+                                    <span>c.</span>
+                                    <span><input type="radio" name="option1"  ></span>
+                                </span>
+                                <span>Options Text</span>
+                            </div>
+                            <div class="option">
+                                <span class="option-select">
+                                    <span>d.</span>
+                                    <span><input type="radio" name="option1"  ></span>
+                                </span>
+                                <span>Options Text</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="form-submit">
+                <button type="submit">SUBMIT QUIZ</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Modals -->
+    <!-- Enter Name Modal -->
+    <div class="begin-quiz-container">
+        <div class="logo"><h1>EazyQuiz</h1></div>
+        <div class="quiz-form">
+            <div><input type="text" id="name" name="name" placeholder="Enter your name to start Quiz"></div>
+            <div><button class="start-quiz">START QUIZ</button></div>
+        </div>
+    </div>
+    <!-- Success Modal -->
+    <div class="success-quiz-container hide-modal">
+        <div class="image" ><img src="images/success.svg" alt=""></div>
+        <div class="success-message">Congratulations. You passed.</div>
+        <div class="score-message-pass">You Scored : 4/5</div>
+        <div class="retry-quiz-pass">
+            <button>RETRY</button>
+        </div>
+    </div>
+    <!-- Failure Modal -->
+    <div class="failure-quiz-container hide-modal">
+        <div class="image" ><img src="images/failure.svg" alt=""></div>
+        <div class="failure-message">Ooops... You need to study</div>
+        <div class="score-message-fail">You Scored : 4/5</div>
+        <div class="retry-quiz-fail">
+            <button>RETRY</button>
+        </div>
+    </div>
+
+    <script src="js/main-scrambling.js" type="module"></script>
+</body>
+</html>

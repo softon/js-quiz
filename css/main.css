@@ -6,7 +6,7 @@
 
 body {
     background: #323232;
-    
+    font-family: 'Roboto Mono', monospace;
 }
 
 .timer-container {
@@ -260,4 +260,41 @@ main {
 
 .hide-modal {
     display: none;
+}
+
+/* Option Bluring */
+.blur-option {
+    filter: blur(3px);
+}
+.option:hover > .blur-option {
+    filter: blur(0);
+}
+
+/* Option Scrambling */
+
+.hide-ch {
+    opacity: 0;
+    
+}
+
+.even-ch {
+    /* animation: hiding 100ms ease-in-out 0ms infinite; */
+}
+
+.odd-ch {
+    /* animation: hiding 100ms ease-in-out 200ms infinite; */
+}
+
+@keyframes hiding {
+    0% {
+        opacity: 0;
+    }
+
+    /* 50% {
+        opacity: 0.5;
+    } */
+
+    100% {
+        opacity: 1;
+    }
 }
